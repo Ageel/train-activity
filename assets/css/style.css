@@ -1,0 +1,11 @@
+body {
+	background-color: red;
+}
+
+.jumbotron{
+	text-align: center;
+	background-image: url("../images/trainRight.jpeg");
+}
+
+
+
