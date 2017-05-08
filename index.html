@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 
 </head>
 <body>
@@ -37,7 +38,10 @@
 		      </tr>
 		    </thead>
 
-		    <tbody>
+		    <tbody id="add-row">
+			</tbody>
+
+		    <!-- <tbody>
 		      <tr>
 		        <tr>
 					<td>Trenton Expres</td>
@@ -60,9 +64,44 @@
 		        <td>5:50 PM</td>
 		        <td>25</td>
 		      </tr>
-		    </tbody>
+		    </tbody> -->
   		</table>
+		
+		<div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Add Train</h3>
+          </div>
+          <div class="panel-body">
+
+            
+            <form role="form">
+              <div class="form-group">
+                <label for="train-input"> Train Name:</label>
+                <input class="form-control" id="train-input" type="text">
+              </div>
+              <div class="form-group">
+                <label for="destination-input">Destination</label>
+                <input class="form-control" id="destination-input" type="text">
+              </div>
+              <div class="form-group">
+                <label for="initialTrain-input">First Train Time (HH:mm - military time)</label>
+                <input class="form-control" id="initialTrain-input" type="text">
+              </div>
+              <div class="form-group">
+                <label for="frequency-input">Frequency (in minutes please)</label>
+                <input class="form-control" id="frequency-input" type="number">
+              </div>
+              <button class="btn btn-primary" id="add-train" type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
 	</div>
+
+
+
+	</div>
+<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+<script type="text/javascript" src="assets/javascript/logic.js"></script>
 	
 </body>
 </html>
